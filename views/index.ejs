@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <h1>"Your URL, Now as a QR Code!" </h1>
+    <div class="container">
+        <% if(!locals.qrCode) {%>
+        <h2>Enter <%= valid %></h2>
+        <form action="/generate" method="POST">
+            <input type="text" name="url" placeholder="Enter here..." required>
+            <button type="submit">Generate QR Code</button>
+        </form>
+        <% }else{%>
+            <h2>Your QR image</h2>
+            <img src="<%= qrCode %>" alt="Generated QR Code">
+            <a href="<%= qrCode %>" download="qr_code.png" id="downloadBtn">
+                <button>Download</button>
+            </a>
+        <%} %>
+    </div>
+</body>
+<script>
+    document.getElementById("downloadBtn").addEventListener("click", function(event) {
+        setTimeout(function() {
+            window.location.href = "/";
+        }, 1000);
+    });
+</script>
+</html>
