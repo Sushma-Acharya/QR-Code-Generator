@@ -22,8 +22,8 @@ This is a simple QR Code Generator web application that allows users to convert 
 
 ![Image](https://github.com/user-attachments/assets/867bc05a-b362-45e2-908b-dc0a2cb71bc1)
 
-<!--## Generate QR-Code from URL
-You can check out the live version here: --> 
+## Generate QR-Code from URL
+You can check out the live version here: [QR Code from URL](https://qrcode-from-url.onrender.com)
 
 ## Installation
 1. Clone this repository:
